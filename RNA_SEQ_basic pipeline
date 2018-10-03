@@ -3,15 +3,17 @@
 RNA SEQ PIPELINE: 
 
 #Indexing REFERENCE HUMAN GENOME BUILD
-All the files are in ensemble-ref_build93 accessible from home dir. To index the respective files run the following 
-#From bowtie2-index folder run :
+All the file of human genome build93  ensemble-ref_build93 accessible from home dir. To index the respective files run the following 
+#From bowtie2-index folder run:folder(/work/users/ankushs/ensembl_ref_build93)
 bowtie2-build Homo_sapiens.GRCh38.dna.primary_assembly.fa Homo_sapiens.GRCh38.dna.primary_assembly
-#From bowtie2-index folder run :
-tophat2 -G Homo_sapiens.GRCh38.93.gtf.gz --transcriptome-index=trans_th2_idx/known Homo_sapiens.GRCh38.dna.primary_assembly)
-#from the cDNA folder run :
+#From bowtie2-index folder run:folder(/work/users/ankushs/ensembl_ref_build93/gtf) or ensembl_ref_build93
+tophat2 -G Homo_sapiens.GRCh38.93.gtf.gz --transcriptome-index=trans_th2_idx/known Homo_sapiens.GRCh38.dna.primary_assembly
+#from the cDNA folder run: folder(/work/users/ankushs/ensembl_ref_build93/bowtie2-index/cdna)
 bowtie2-build Homo_sapiens.GRCh38.cdna.all.fa bowtie2-build Homo_sapiens.GRCh38.cdna.all
-#from the genome folder run -
+#from the genome folder run: folder (/work/users/ankushs/ensembl_ref_build93/genome)
 samtools faidx Homo_sapiens.GRCh38.dna.primary_assembly.fa
+                                                         
+
 
 
 #STANDARD Deviation were obtained from picard tools 
